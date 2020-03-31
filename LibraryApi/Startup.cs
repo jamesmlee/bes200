@@ -35,7 +35,6 @@ namespace LibraryApi
             services.AddControllers();
             services.AddDbContext<LibraryDataContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("LibraryDatabase"))
-                // Don't do this!
             );
 
             services.AddSwaggerGen(c =>
